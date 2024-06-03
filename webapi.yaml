@@ -21,8 +21,8 @@ components:
   schemas:
     weatherData:
       type: object
-      datasetDescription:
-        title:
+      properties: # Add the missing properties keyword
+        datasetDescription:
           type: string
           description: datasetDescription
         locationName:
