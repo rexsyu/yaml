@@ -42,11 +42,11 @@ components:
           description: startTime   
         endTime:
           type: Timestamp
-          description: endTime                                    
+          description: endTime                                  
   securitySchemes:
     apiKeyAuth:     # arbitrary name for the security scheme
       type: apiKey
-      in: query     # can be "header", "query" or "cookie"
-      name: Authorization # name of the query parameter, header value or cookie
+      in: header    # The API key is passed in the request header
+      name: Authorization # The name of the header to pass the API key
 security:
   - apiKeyAuth: [] # use the same name as in securitySchemes
