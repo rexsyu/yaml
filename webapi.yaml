@@ -38,11 +38,13 @@ components:
           type: string
           description: parameterUnit    
         startTime:
-          type: Timestamp
+          type: string
+          format: date-time
           description: startTime   
         endTime:
-          type: Timestamp
-          description: endTime                                  
+          type: string
+          format: date-time
+          description: endTime                               
   securitySchemes:
     apiKeyAuth:     # arbitrary name for the security scheme
       type: apiKey
