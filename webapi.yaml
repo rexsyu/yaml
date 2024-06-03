@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: Weather API
+  version: 1.0.0
+servers:
+  - url: https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001
+paths:
+  /coffee/hot:
+    get:
+      summary: Get 36 Hours of Weather Data
+      responses:
+        '200':
+          description: Get 36 Hours of Weather Data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/weatherData'
+components:
+  schemas:
+    weatherData:
+      type: object
+      datasetDescription:
+        title:
+          type: string
+          description: datasetDescription
+        locationName:
+          type: string
+          description: locationName
+        parameterName:
+          type: string
+          description: parameterName
+        parameterValue:
+          type: string
+          description: parameterValue        
+        parameterUnit:
+          type: string
+          description: parameterUnit    
+        startTime:
+          type: Timestamp
+          description: startTime   
+        endTime:
+          type: Timestamp
+          description: endTime                                    
+  securitySchemes:
+    apiKeyAuth:     # arbitrary name for the security scheme
+      type: apiKey
+      in: query     # can be "header", "query" or "cookie"
+      name: api_key # name of the query parameter, header value or cookie
+security:
+  - apiKeyAuth: [] # use the same name as in securitySchemes
