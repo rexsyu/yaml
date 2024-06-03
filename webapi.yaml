@@ -3,13 +3,13 @@ info:
   title: Weather API
   version: 1.0.0
 servers:
-  - url: https://opendata.cwa.gov.tw/api/v1/rest/datastore
+  - url: https://opendata.cwa.gov.tw
 paths:
-  /F-C0032-001:
+  /api/v1/rest/datastore/F-C0032-001:
     get:
       summary: Get 36 Hours of Weather Data
       parameters:
-        - in: header
+        - in: query
           name: Authorization
           required: true
           schema:
