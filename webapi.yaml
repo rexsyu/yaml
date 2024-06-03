@@ -3,11 +3,17 @@ info:
   title: Weather API
   version: 1.0.0
 servers:
-  - url: https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001
+  - url: https://opendata.cwa.gov.tw/api/v1/rest/datastore
 paths:
-  /coffee/hot:
+  /F-C0032-001:
     get:
       summary: Get 36 Hours of Weather Data
+      parameters:
+        - in: header
+          name: Authorization
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: Get 36 Hours of Weather Data
@@ -21,7 +27,7 @@ components:
   schemas:
     weatherData:
       type: object
-      properties: # Add the missing properties keyword
+      properties:
         datasetDescription:
           type: string
           description: datasetDescription
@@ -44,11 +50,4 @@ components:
         endTime:
           type: string
           format: date-time
-          description: endTime                               
-  securitySchemes:
-    apiKeyAuth:     # arbitrary name for the security scheme
-      type: apiKey
-      in: header    # The API key is passed in the request header
-      name: Authorization # The name of the header to pass the API key
-security:
-  - apiKeyAuth: [] # use the same name as in securitySchemes
+          description: endTime
