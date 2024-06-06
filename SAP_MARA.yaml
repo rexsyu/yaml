@@ -1,64 +1,24 @@
 openapi: 3.1.0
 info:
-  title: Weather API
-  version: 1.0.0
+  title: SAP MARA
+  description: 
+  version: '2.2'
 paths:
-  /weather/36hr:
+  /material:
     get:
-      summary: Get 36 Hours of Weather Data
       responses:
-        '200':
-          description: A successful response
+        200:
+          description: '200 response description'
           content:
             application/json:
-              schema:
+              schema: 
                 type: object
                 properties:
-                  data:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/weatherData'
-                example:
-                  data:
-                    - datasetDescription: "36小時天氣預報"
-                      locationName: "台北市"
-                      parameterName: "天氣狀況"
-                      parameterValue: "多雲時晴"
-                      parameterUnit: ""
-                      startTime: "2023-04-01T00:00:00Z"
-                      endTime: "2023-04-02T12:00:00Z"
-                    - datasetDescription: "36小時天氣預報"
-                      locationName: "高雄市"
-                      parameterName: "最高溫度"
-                      parameterValue: "30"
-                      parameterUnit: "C"
-                      startTime: "2023-04-01T00:00:00Z"
-                      endTime: "2023-04-02T12:00:00Z"
-components:
-  schemas:
-    weatherData:
-      type: object
-      properties:
-        datasetDescription:
-          type: string
-          description: datasetDescription
-        locationName:
-          type: string
-          description: locationName
-        parameterName:
-          type: string
-          description: parameterName
-        parameterValue:
-          type: string
-          description: parameterValue        
-        parameterUnit:
-          type: string
-          description: parameterUnit    
-        startTime:
-          type: string
-          format: date-time
-          description: startTime   
-        endTime:
-          type: string
-          format: date-time
-          description: endTime
+                  matnr:
+                    description: '料號'
+                    type: string
+                  desc:
+                    description: '說明'
+                    type: string
+      description: 'get material information'
+      deprecated: false
