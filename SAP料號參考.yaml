@@ -1,0 +1,36 @@
+components:
+  schemas:
+    weatherData:
+      type: object
+      properties:
+        datasetDescription:
+          type: string
+          description: datasetDescription
+        locationName:
+          type: string
+          description: locationName
+        parameterName:
+          type: string
+          description: parameterName
+        parameterValue:
+          type: string
+          description: parameterValue        
+        parameterUnit:
+          type: string
+          description: parameterUnit    
+        startTime:
+          type: string
+          format: date-time
+          description: startTime   
+        endTime:
+          type: string
+          format: date-time
+          description: endTime
+      example: # 正確添加單個範例物件
+        datasetDescription: "36小時天氣預報"
+        locationName: "台北市"
+        parameterName: "天氣狀況"
+        parameterValue: "多雲時晴"
+        parameterUnit: ""
+        startTime: "2023-04-01T00:00:00Z"
+        endTime: "2023-04-02T12:00:00Z"
