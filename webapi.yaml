@@ -1,22 +1,16 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
   title: Weather API
   version: 1.0.0
 servers:
-  - url: https://opendata.cwa.gov.tw
+  - url: https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=rdec-key-123-45678-011121314&format=JSON
 paths:
-  /api/v1/rest/datastore/F-C0032-001:
+  /coffee/hot:
     get:
       summary: Get 36 Hours of Weather Data
-      parameters:
-        - in: query
-          name: Authorization
-          required: true
-          schema:
-            type: string
       responses:
         '200':
-          description: A successful response
+          description: Get 36 Hours of Weather Data
           content:
             application/json:
               schema:
@@ -27,7 +21,7 @@ components:
   schemas:
     weatherData:
       type: object
-      properties:
+      properties: # Add the missing properties keyword
         datasetDescription:
           type: string
           description: datasetDescription
@@ -44,24 +38,9 @@ components:
           type: string
           description: parameterUnit    
         startTime:
-          type: string
-          format: date-time
+          type: Timestamp
           description: startTime   
         endTime:
-          type: string
-          format: date-time
-          description: endTime
-      example: # 添加模擬資料作為範例
-        - datasetDescription: "36小時天氣預報"
-          locationName: "台北市"
-          parameterName: "天氣狀況"
-          parameterValue: "多雲時晴"
-          parameterUnit: ""
-          startTime: "2023-04-01T00:00:00Z"
-          endTime: "2023-04-02T12:00:00Z"
-        - datasetDescription: "36小時天氣預報"
-          locationName: "高雄市"
-          parameterName: "最高溫度"
-          parameterValue: "30"
-          parameterUnit: "C"
-          startTime: "2023-04-01
+          type: Timestamp
+          description: endTime                                    
+ 
