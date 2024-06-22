@@ -4,8 +4,7 @@ info:
   description: SAP 料號資料
   version: '2.2'
 servers:
-  -
-    url: 'http://221.224.123.238:9527/api/MARA/GetMatnr/ZX000000'
+  - url: 'http://221.224.123.238:9527/api/MARA/GetMatnr/ZX000000'
 paths:
   /posts:
     get:
