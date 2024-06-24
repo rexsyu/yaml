@@ -4,7 +4,7 @@ info:
   description: SAP 料號資料
   version: '2.2'
 servers:
-  - url: 'http://221.224.123.238:9527/api/MARA/GetMatnr/ZX000000'
+  - url: 'http://221.224.123.238:9527/api/MARA/GetMaterialList/10'
 paths:
   /posts:
     get:
@@ -16,9 +16,6 @@ paths:
               schema: 
                 type: object
                 properties:
-                  ReturnMsg:
-                    description: '回傳訊息'
-                    type: string
                   MATNR:
                     description: '物料編號'
                     type: string
