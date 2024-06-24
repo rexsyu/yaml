@@ -5,8 +5,7 @@ info:
   version: '2.2'
 servers:
   - url: 'http://221.224.123.238:9527/api/MARA/GetMaterialList/10'
-paths:
-  /posts:
+paths: 
     get:
       responses:
         200:
