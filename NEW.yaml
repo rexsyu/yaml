@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  title: SAP API
+  description: 我會回傳SAP API的料號規格資料
+  version: 1.0.0
+paths:
+  /static-response:
+    get:
+      summary: 獲取靜態回應
+      description: 這個端點會回傳一個靜態的 JSON 物件。
+      responses:
+        '200':
+          description: 成功回應
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  MATNR:
+                    type: string
+                    example: 921300201
+                  MAKTX:
+                    type: string
+                    example: 我是一個料號
+                  status:
+                    type: string
+                    example: success
