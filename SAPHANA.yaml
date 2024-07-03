@@ -4,7 +4,7 @@ info:
   description: SAP 料號資料
   version: '2.2'
 servers:
-  - url: 'http://221.224.123.238:9527/api/MARA/GetMaterialList'
+  - url: 'http://221.224.123.238:9527/api/MARA/GetMaterialJson'
 paths: 
   /10:
     get:
