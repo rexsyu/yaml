@@ -4,7 +4,7 @@ info:
   description: SAP 料號資料
   version: '2.2'
 servers:
-  - url: 'http://218.35.174.245/WEBAPI_SAPHANA/api/MARA/GetMaterialList/10'
+  - url: 'https://218.35.174.245/api/MARA/GetMaterialList/10'
 paths:  
     get:
       responses:
