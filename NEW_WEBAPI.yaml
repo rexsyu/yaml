@@ -14,7 +14,9 @@ paths:
           content:
             application/json:
               schema: 
-                type: object
+                type: array 
+                items:
+                  type: object
                 properties:
                   MATNR:
                     description: '物料編號'
