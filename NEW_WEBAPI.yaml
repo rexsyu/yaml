@@ -18,11 +18,7 @@ paths:
                 items:
                   type: object
                 properties:
-                  MATNR:
-                    description: '物料編號'
+                  MATNR:                    
                     type: string
-                  MAKTX:
-                    description: '物料描述'
+                  MAKTX:                    
                     type: string
-      description: 'get use responses'
-      deprecated: false
