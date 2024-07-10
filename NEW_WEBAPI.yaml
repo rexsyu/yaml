@@ -4,8 +4,9 @@ info:
   description: SAP 料號資料
   version: '2.2'
 servers:
-  - url: 'https://218.35.174.245/api/MARA/GetMaterialJson'
+  - url: https://218.35.174.245
 paths:  
+   /api/MARA/GetMaterialJson
     get:
       responses:
         200:
