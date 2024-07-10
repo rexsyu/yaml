@@ -17,8 +17,8 @@ paths:
                 type: array 
                 items:
                   type: object
-                properties:
-                  MATNR:                    
-                    type: string
-                  MAKTX:                    
-                    type: string
+                  properties:
+                    MATNR:                    
+                      type: string
+                    MAKTX:                    
+                      type: string
