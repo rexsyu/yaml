@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: SAP MARA
   description: SAP 料號資料
-  version: '2.2'
+  version: '2.3'
 servers:
   - url: https://218.35.174.245
 paths:
