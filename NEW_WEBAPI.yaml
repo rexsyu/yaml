@@ -1,0 +1,25 @@
+openapi: 3.1.0
+info:
+  title: SAP MARA
+  description: SAP 料號資料
+  version: '2.2'
+servers:
+  - url: 'https://218.35.174.245/api/MARA/GetMaterialJson'
+paths:  
+    get:
+      responses:
+        200:
+          description: '200 response description'
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  MATNR:
+                    description: '物料編號'
+                    type: string
+                  MAKTX:
+                    description: '物料描述'
+                    type: string
+      description: 'get use responses'
+      deprecated: false
