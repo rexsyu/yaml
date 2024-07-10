@@ -6,7 +6,7 @@ info:
 servers:
   - url: https://218.35.174.245
 paths:
-  /api/MARA/GetMaterialJson:
+  api/MARA/GetMaterialList/10:
     get:
       responses:
         200:
