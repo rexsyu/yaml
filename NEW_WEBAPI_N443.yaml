@@ -1,0 +1,22 @@
+openapi: 3.1.0
+info:
+  title: SAP MARA
+  description: SAP 料號資料
+  version: 2.3
+servers:
+  - url: http://218.35.174.245/WEBAPI_SAPHANA/
+paths:
+  api/MARA/GetMaterialList/10:
+    get:
+      responses:
+        200:
+          description:  A JSON array 
+          content:
+            application/json:
+              schema: 
+                type: array 
+                  properties:
+                    MATNR:                    
+                      type: string
+                    MAKTX:                    
+                      type: string            
