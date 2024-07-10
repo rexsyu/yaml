@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: SAP MARA
   description: SAP 料號資料
-  version: '2.3'
+  version: 2.3
 servers:
   - url: https://218.35.174.245
 paths:
@@ -10,7 +10,7 @@ paths:
     get:
       responses:
         200:
-          description: '200 response description'
+          description:  A JSON array 
           content:
             application/json:
               schema: 
@@ -21,4 +21,4 @@ paths:
                     MATNR:                    
                       type: string
                     MAKTX:                    
-                      type: string
+                      type: string            
